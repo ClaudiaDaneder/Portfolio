@@ -1,0 +1,57 @@
+<section id="contact">
+    <h3>Contact</h3>
+
+    <div class="contact-container">
+        <div class="contact-text">
+            <h4>Got a problem to solve?</h4>
+            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to
+                your projects with my work.</p>
+            <p>Need a Frontend developer? Contact me!</p>
+        </div>
+
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <div class="input-fields">
+                <div class="input-wrapper">
+                    <input formControlName="name" type="text" placeholder="Your name">
+                    <div
+                        [ngClass]="{'alert-transparent': contactForm.controls['name'].valid || contactForm.controls['name'].pristine, 'alert-visible': !contactForm.controls['name'].valid && !contactForm.controls['name'].pristine && contactForm.controls['name'].errors?.['required']}">
+                        Your name is required
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <input formControlName="email" type="email" placeholder="Your email">
+                    <ng-container>
+                        <div class="alert-transparent">placeholder</div>
+                        <div *ngIf="contactForm.controls['email'].errors?.['required'] && (contactForm.controls['email'].touched || contactForm.controls['email'].value !== '')"
+                            class="alert-visible" style="margin-bottom: -20.5px;">
+                            Your email is required
+                        </div>
+                        <div *ngIf="contactForm.controls['email'].errors?.['email'] && !contactForm.controls['email'].errors?.['required'] && (contactForm.controls['email'].touched || contactForm.controls['email'].value !== '')"
+                            class="alert-visible" style="margin-bottom: -20.5px;">
+                            Invalid email format
+                        </div>
+                    </ng-container>
+
+                </div>
+                <div class="input-wrapper">
+                    <textarea formControlName="message" rows="6" placeholder="Your message"></textarea>
+                    <div
+                        [ngClass]="{'alert-transparent': contactForm.controls['message'].valid || contactForm.controls['message'].pristine, 'alert-visible': !contactForm.controls['message'].valid && !contactForm.controls['message'].pristine && contactForm.controls['message'].errors?.['required']}">
+                        Your message is empty</div>
+                </div>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" formControlName="privacyPolicy">
+                <p>I have read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</p>
+            </div>
+            <div
+                [ngClass]="{'privacy-alert-transparent': contactForm.controls['privacyPolicy'].valid || contactForm.controls['privacyPolicy'].pristine, 'privacy-alert-visible': !contactForm.controls['privacyPolicy'].valid && !contactForm.controls['privacyPolicy'].pristine && contactForm.controls['privacyPolicy'].errors?.['required']}">
+                Please accept the privacy policy.</div>
+            <button type="submit" class="contact-btn" [disabled]="contactForm.invalid">Send Email</button>
+        </form>
+
+    </div>
+
+
+</section>

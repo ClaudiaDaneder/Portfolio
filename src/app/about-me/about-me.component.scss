@@ -1,0 +1,55 @@
+@import './../../variables.scss';
+
+section {
+    background-color: $background;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 100px 100px;
+    background-image: url(./../../assets/img/about-me-shadow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    scroll-margin-top: 11rem;
+}
+
+
+.about-me-container {
+    @include dFlexSB();
+    width: 100%;
+    margin-top: -150px;
+    z-index: 2;
+
+}
+
+.photo-container {
+    @include dFlexCenter();
+}
+
+.photo {
+    width: 450px;
+    height: auto;
+
+    img {
+        width: 100%;
+        border-radius: 100%;
+        object-fit: fill;
+        border: 4px solid $orange
+    }
+}
+
+.about-me-text {
+    max-width: 471px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.personal {
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+
+    >img {
+        padding: 10px 10px 0 35px;
+    }
+}

@@ -1,0 +1,30 @@
+@import './../../../variables.scss';
+
+nav {
+    @include dFlexSB();
+    background-color: $background;
+    width: 100%;
+    padding: 27px 100px;
+    position: fixed;
+    z-index: 9999;
+}
+
+.logo {
+    width: 60px
+}
+
+.nav-links {
+    display: flex;
+    font-size: 23px;
+    gap: 46px;
+
+    >a {
+        text-decoration: none;
+        transition: 100ms linear;
+
+        &:hover {
+            color: $orange;
+
+        }
+    }
+}

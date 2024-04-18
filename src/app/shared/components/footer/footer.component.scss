@@ -1,0 +1,62 @@
+@import './../../../../variables.scss';
+
+footer {
+    background-color: $background;
+    padding: 80px 100px;
+    border-top: 4px solid $orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.logo {
+    width: 60px
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+
+    a {
+        img {
+            width: 30px;
+            height: 30px;
+            margin-top: 3px;
+            margin-bottom: -3px;
+            transition: 100ms ease-out;
+        }
+
+        img:hover {
+            transform: scale(1.33);
+        }
+    }
+}
+
+.legalities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0; 
+        border-bottom: $darkorange 2px solid; 
+        transition: width 100ms ease-in; 
+    }
+
+    &:hover::after {
+        width: 50px; 
+    }
+}

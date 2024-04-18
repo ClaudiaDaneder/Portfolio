@@ -1,0 +1,16 @@
+$orange: #FA7902;
+$darkorange: #FF4747;
+$magenta: #D61CE6;
+$background: #141D2F;
+
+@mixin dFlexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin dFlexSB() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

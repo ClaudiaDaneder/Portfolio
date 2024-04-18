@@ -1,0 +1,46 @@
+@import './../../variables.scss';
+
+section {
+    display: flex;
+    align-items: center;
+    background-color: $background;
+    max-width: 100%;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+
+    a {
+        img {
+            width: 30px;
+            height: 30px;
+            margin-top: 3px;
+            margin-bottom: -3px;
+            transition: 100ms ease-out;
+        }
+
+        img:hover {
+            transform: scale(1.33);
+        }
+    }
+}
+
+.hero-swoop {
+    background-image: url(./../../assets/img/hero-swoop2.svg);
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    width: 100%;
+    min-height: 500px;
+    margin-top: -160px;
+    @include dFlexSB();
+    padding: 60px 0 50px 0;
+    z-index: 0;
+}
+
+.scroll-down {
+    transform: rotate(90deg);
+    max-height: 120px;
+
+}
