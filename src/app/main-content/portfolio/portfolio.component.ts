@@ -9,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class PortfolioComponent {
 
+  forwardGithub(target: string) {
+    window.open('https://github.com/ClaudiaDaneder/' + target, '_blank');
+  }
+
+  forwardLiveTest(target: string) {
+    window.open('https://claudia-daneder.developerakademie.net/' + target, '_blank');
+  }
 }

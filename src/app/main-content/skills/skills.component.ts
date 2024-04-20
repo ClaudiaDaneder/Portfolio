@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
- icons = ['Rest-API', 'Git', 'HTML', 'CSS', 'TypeScript', 'Angular', 'Firebase', 'Scrum', 'JavaScript', 'SCSS'];
+ icons = ['Rest-API', 'Git', 'HTML', 'CSS', 'TypeScript', 'Angular', 'Firebase', 'Scrum', 'SCSS', 'JavaScript'];
 }

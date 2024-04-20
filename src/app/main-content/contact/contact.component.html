@@ -43,7 +43,8 @@
             </div>
             <div class="checkbox-wrapper">
                 <input type="checkbox" formControlName="privacyPolicy">
-                <p>I have read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</p>
+                <p>I have read the <a (click)="openPrivacyPolicy()">privacy policy</a> and agree to the processing of my
+                    data as outlined.</p>
             </div>
             <div
                 [ngClass]="{'privacy-alert-transparent': contactForm.controls['privacyPolicy'].valid || contactForm.controls['privacyPolicy'].pristine, 'privacy-alert-visible': !contactForm.controls['privacyPolicy'].valid && !contactForm.controls['privacyPolicy'].pristine && contactForm.controls['privacyPolicy'].errors?.['required']}">
@@ -53,5 +54,8 @@
 
     </div>
 
+    <div class="navigation-top">
+        <a href="#home"><div class="arrow"></div></a>
+    </div>
 
 </section>

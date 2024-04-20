@@ -1,9 +1,13 @@
-@import './../../variables.scss';
+@import './../../../variables.scss';
+
+* {
+    margin: 0;
+}
 
 section {
     background-color: $background;
     padding: 100px 0;
-    background-image: url(./../../assets/img/shadow-portfolio-red.png), url(./../../assets/img/shadow-portfolio-orange.png);
+    background-image: url(./../../../assets/img/shadow-portfolio-red.png), url(./../../../assets/img/shadow-portfolio-orange.png);
     background-repeat: no-repeat;
     background-size: 500px, 320px;
     background-position: left 0% top 55%, right 0 bottom 0;
@@ -117,6 +121,16 @@ h3 {
             color: $darkorange;
         }
     }
+
+    &:disabled {
+        background-color: grey;
+
+        &:hover {
+            transform: none;
+            background-color: grey;
+            cursor: default;
+        }
+    }
 }
 
 .github-btn {
@@ -135,6 +149,16 @@ h3 {
         &:hover {
             background-color: #fff;
             color: $darkorange;
+        }
+    }
+
+    &:disabled {
+        background-color: grey;
+
+        &:hover {
+            transform: none;
+            background-color: grey;
+            cursor: default;
         }
     }
 }

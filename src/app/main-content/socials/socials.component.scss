@@ -1,4 +1,8 @@
-@import './../../variables.scss';
+@import './../../../variables.scss';
+
+* {
+    margin: 0;
+}
 
 section {
     display: flex;
@@ -13,6 +17,9 @@ section {
     gap: 42px;
 
     a {
+        &:hover {
+            color: $darkorange
+        }
         img {
             width: 30px;
             height: 30px;
@@ -28,12 +35,12 @@ section {
 }
 
 .hero-swoop {
-    background-image: url(./../../assets/img/hero-swoop2.svg);
+    background-image: url(./../../../assets/img/hero-swoop2.svg);
     background-repeat: no-repeat;
-    max-width: 1440px;
+    max-width: 100%;
     width: 100%;
     min-height: 500px;
-    margin-top: -160px;
+    margin-top: -190px;
     @include dFlexSB();
     padding: 60px 0 50px 0;
     z-index: 0;

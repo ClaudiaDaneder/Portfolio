@@ -1,4 +1,8 @@
-@import './../../variables.scss';
+@import './../../../variables.scss';
+
+* {
+    margin: 0;
+}
 
 section {
     background-color: $background;
@@ -8,7 +12,7 @@ section {
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: top; 
-    background-image: url(./../../assets/img/skills-shadow.png);
+    background-image: url(./../../../assets/img/skills-shadow.png);
     background-repeat: no-repeat;
     background-size: 250px;
     background-position: left 0 top 5%;

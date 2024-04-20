@@ -1,11 +1,15 @@
-@import './../../variables.scss';
+@import './../../../variables.scss';
+
+* {
+    margin: 0;
+}
 
 section {
     background-color: $background;
     display: flex;
     align-items: center;
     padding: 100px 0 100px 100px;
-    background-image: url(./../../assets/img/about-me-shadow.png);
+    background-image: url(./../../../assets/img/about-me-shadow.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
