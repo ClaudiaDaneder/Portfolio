@@ -8,30 +8,31 @@ section {
     background-color: $background;
     display: flex;
     align-items: center;
-    padding: 100px 0 100px 100px;
     background-image: url(./../../../assets/img/about-me-shadow.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right 0 bottom 0;
     scroll-margin-top: 11rem;
+    position: relative
 }
 
 
 .about-me-container {
     @include dFlexSB();
     width: 100%;
-    margin-top: -150px;
-    z-index: 2;
-
+    padding: 160px 0 160px 100px;
 }
 
 .photo-container {
     @include dFlexCenter();
+    position: relative;
 }
 
 .photo {
     width: 450px;
     height: auto;
+    position: relative;
+    right: 260px;
 
     img {
         width: 100%;
@@ -41,8 +42,20 @@ section {
     }
 }
 
+.orange_line {
+    width: 260px;
+    height: 4px;
+    border: $orange 2px solid;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
 .about-me-text {
-    max-width: 471px;
+    max-width: 40%;
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -55,5 +68,44 @@ section {
 
     >img {
         padding: 10px 10px 0 35px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .photo {
+        max-width: 380px;
+        right: 160px;
+    }
+
+    .orange_line {
+        width: 160px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .photo {
+        max-width: 350px;
+        right: 100px;
+    }
+
+    .orange_line {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .about-me-container {
+        padding: 80px 32px
+    }
+
+    .photo,
+    .orange_line {
+        display: none;
+    }
+
+    .about-me-text {
+        max-width: unset;
+        width: 100%;
     }
 }

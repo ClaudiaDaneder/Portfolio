@@ -1,148 +1,5 @@
 @import './variables.scss';
 
-* {
-  margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-  color: #fff;
-  box-sizing: border-box;
-  max-width: 1440px;
-}
-
-body {
-  background-color: $background;
-  margin: 0 0
-}
-
-html {
-  --mat-dialog-with-actions-content-padding: unset;
-  --mat-dialog-headline-padding: unset;
-  --mat-dialog-actions-padding: unset;
-}
-
-p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-a {
-  text-decoration: none;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-button {
-  transition-duration: 125ms;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-h1 {
-  font-size: 71px;
-  font-weight: 700;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-h2 {
-  font-size: 58px;
-  color: $darkorange;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-h3 {
-  font-size: 71px;
-  font-weight: 700;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-h4 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  color: $darkorange
-}
-
-h5 {
-  font-size: 23px;
-  font-weight: 400;
-  color: $orange;
-}
-
-.cdk-overlay-container {
-  right: 0
-}
-
-.mat-mdc-dialog-container .mdc-dialog__surface {
-  background-color: $background !important;
-  padding: 20px 30px
-}
-
-.mat-mdc-dialog-container-with-actions .mat-mdc-dialog-content {
-  padding: var(--mat-dialog-with-actions-content-padding, 0) !important;
-}
-
-.mat-mdc-dialog-container .mdc-dialog__title {
-  color: #fff !important;
-}
-
-.mat-mdc-dialog-title {
-  padding: var(--mat-dialog-headline-padding, 0) !important;
-}
-
-.mat-mdc-dialog-actions {
-  padding: var(--mat-dialog-actions-padding, 0) !important;
-  justify-content: end;
-  padding-top: 8px !important;
-}
-
-mat-dialog-content {
-
-  >p,
-  li {
-    font-size: 14px;
-    font-weight: 200;
-  }
-
-  >h1 {
-    font-size: 20px
-  }
-
-  >h2,
-  ul h2 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 10px;
-  }
-}
-
-mat-dialog-actions button {
-  background-color: orange;
-  color: #fff;
-  padding: 4px 16px;
-  border: none;
-  border-radius: 6px;
-
-  &:hover {
-    background-color: $darkorange;
-  }
-
-  &:active, :focus {
-    background-color: #fff;
-    color: $orange
-  }
-}
-
-
 /* poppins-100 - latin */
 @font-face {
   font-display: swap;
@@ -240,4 +97,212 @@ mat-dialog-actions button {
   font-weight: 900;
   src: url('/assets/fonts/poppins-v21-latin-900.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+
+* {
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color: #fff;
+  box-sizing: border-box;
+  max-width: 1440px;
+}
+
+body {
+  background-color: $background;
+  margin: 0 0
+}
+
+html {
+  --mat-dialog-with-actions-content-padding: unset;
+  --mat-dialog-headline-padding: unset;
+  --mat-dialog-actions-padding: unset;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+a {
+  text-decoration: none;
+  transition-duration: 125ms;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+button {
+  transition-duration: 125ms;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 71px;
+  font-weight: 700;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h2 {
+  font-size: 58px;
+  color: $darkorange;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h3 {
+  font-size: 71px;
+  font-weight: 700;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h4 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: $darkorange
+}
+
+h5 {
+  font-size: 23px;
+  font-weight: 400;
+  color: $orange;
+}
+
+::-webkit-scrollbar {
+  background-color: $background;
+  width: 32px
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $darkorange;
+  border-radius: 20px;
+  border: 12px solid $background;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: $background;
+}
+
+
+// Material-Design
+
+.cdk-overlay-container {
+  right: 0;
+
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: $background !important;
+  padding: 20px 30px;
+
+}
+
+.mat-mdc-dialog-container {
+  border-radius: 50px;
+}
+
+.mat-mdc-dialog-container-with-actions .mat-mdc-dialog-content {
+  padding: var(--mat-dialog-with-actions-content-padding, 0) !important;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__title {
+  color: $orange !important;
+  font-size: 24px !important;
+  text-align: center;
+
+}
+
+.mat-mdc-dialog-title {
+  padding: var(--mat-dialog-headline-padding, 0) !important;
+  padding-bottom: 20px !important;
+}
+
+.mat-mdc-dialog-actions {
+  padding: var(--mat-dialog-actions-padding, 0) !important;
+
+  button {
+    background-color: $orange;
+    color: #fff;
+    padding: 4px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: $darkorange;
+    }
+
+    &:active,
+    :focus {
+      background-color: #fff;
+      color: $orange
+    }
+  }
+}
+
+mat-dialog-content {
+  p {
+    margin-bottom: 6px;
+  }
+
+  p,
+  li {
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  h2,
+  ul h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+}
+
+
+
+@media screen and (max-width: 1400px) {
+  h1, h3 {
+    font-size: 58px;
+  }
+
+  h2 {
+    font-size: 47px;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  h1, h3 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 37px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
 }

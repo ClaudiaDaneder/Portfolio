@@ -8,14 +8,13 @@ section {
     background-color: $background;
     display: flex;
     align-items: center;
-    padding: 150px 100px ;
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: top; 
     background-image: url(./../../../assets/img/skills-shadow.png);
     background-repeat: no-repeat;
-    background-size: 250px;
-    background-position: left 0 top 5%;
+    background-size: contain;
+    background-position: left;
     scroll-margin-top: 6rem;
 }
 
@@ -23,6 +22,7 @@ section {
     position: relative;
     @include dFlexSB();
     gap: 54px;
+    padding: 150px 100px;
 }
 
 .shadow {
@@ -64,7 +64,9 @@ section {
 
 .icons {
     max-width: 650px;
-    @include dFlexSB();
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     row-gap: 54px;
     column-gap: 70px;
@@ -77,7 +79,7 @@ section {
     align-items: center;
     gap: 10px;
 
-    >img {
+    img {
         height: 60px;
         width: auto;
     }
@@ -97,7 +99,7 @@ h3 {
     position: relative;
     
     &::after {
-        border: $orange 2px solid;
+        border: $darkorange 2px solid;
         content: "";
         position: absolute;
         right: -100px;
@@ -105,6 +107,14 @@ h3 {
         width: 80px;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
-        
     }
+}
+
+
+@media screen and (max-width: 1020px) {
+    .skills-container {
+        flex-direction: column-reverse;
+        padding: 80px 32px;
+    }
+
 }

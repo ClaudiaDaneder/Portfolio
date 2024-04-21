@@ -128,14 +128,6 @@ h4 {
 }
 
 
-// @media screen and (max-width: 500px) {
-//     .add_dialog_wrapper {
-//         width: 100vw;
-//         padding: 16px 32px;
-//     }
-// }
-
-
 .contact-btn {
     align-self: center;
     background-color: $orange;
@@ -261,5 +253,21 @@ input[type=checkbox] {
     &:hover {
         background-image: url(./../../../assets/img/arrow-up_orange.svg);
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .contact-container {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        gap: 0;
+    }
+
+    .contact-text[_ngcontent-ng-c2074889222] {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 50px;
     }
 }
