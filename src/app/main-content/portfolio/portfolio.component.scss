@@ -6,23 +6,20 @@
 
 section {
     background-color: $background;
-    padding: 100px 0;
+    padding: 100px 32px;
     background-image: url(./../../../assets/img/shadow-portfolio-red.png), url(./../../../assets/img/shadow-portfolio-orange.png);
     background-repeat: no-repeat;
-    background-size: 500px, 320px;
-    background-position: left 0% top 55%, right 0 bottom 0;
+    background-size: 40%, 40%;
+    background-position: left 0% top 23%, right 0 bottom 0;
 }
 
 h3 {
     text-align: center;
     position: relative;
-    z-index: 1;
-    padding: 10px;
-    display: block;
 
     &::before {
         border: $darkorange 2px solid;
-        width: 100px;
+        width: 10%;
         content: "";
         position: absolute;
         right: calc(50% + 180px);
@@ -33,13 +30,11 @@ h3 {
 
     &::after {
         border: $darkorange 2px solid;
-        width: calc(50% - 180px);
+        width: calc(50% - 180px + 32px);
         content: "";
         position: absolute;
-        right: 0;
+        right: -32px;
         top: 50%;
-        z-index: -1;
-
     }
 }
 
@@ -65,12 +60,13 @@ h3 {
 
 .element-reverse {
     flex-direction: row-reverse;
-    margin-left: 100px
+    margin-left: 100px;
+    margin-right: 0;
 }
 
 .description {
     display: flex;
-    max-width: 513px;
+    width: 513px;
     flex-direction: column;
     justify-content: flex-end;
     gap: 35px;
@@ -163,7 +159,45 @@ h3 {
     }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1400px) {
+    h3 {
+        &::before {
+            right: calc(50% + 150px);
+        }
+
+        &::after {
+            width: calc(50% - 150px + 32px);
+        }
+    }
+}
+
+@media screen and (max-width: 1245px) {
+    h3 {
+        &::before {
+            right: calc(50% + 120px);
+        }
+
+        &::after {
+            width: calc(50% - 120px + 32px);
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    .element,
+    .element-reverse {
+        img {
+            width: 550px
+        }
+    }
+
+    .description {
+        max-width: 430px;
+    }
+}
+
+@media screen and (max-width: 1035px) {
     .element {
         flex-direction: column;
         justify-content: center;
@@ -196,5 +230,62 @@ h3 {
 
     .main-container {
         margin: 0;
+    }
+
+    .element,
+    .element-reverse {
+        img {
+            width: 100%
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h3 {
+
+        &::before {
+            right: calc(50% + 100px);
+        }
+
+        &::after {
+            width: calc(50% - 100px + 32px);
+        }
+    }
+
+    .main-container {
+        gap: 60px;
+        margin: 80px 0;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .description {
+        width: 90%;
+    }
+
+    .button-container {
+        gap: 32px;
+
+        button {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+    }
+
+    .center {
+        width: 100%;
+    }
+
+    section {
+        padding: 60px 32px
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .button-container {
+        flex-direction: column;
+        gap: 16px
     }
 }

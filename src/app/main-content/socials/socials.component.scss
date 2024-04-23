@@ -10,7 +10,6 @@ section {
     justify-content: space-between;
     width: 100%;
     height: 18vh
-
 }
 
 .social-links {
@@ -23,6 +22,7 @@ section {
         &:hover {
             color: $darkorange
         }
+
         img {
             width: 30px;
             height: 30px;
@@ -43,8 +43,32 @@ section {
 }
 
 
-@media screen and (max-width: 1000px) {
-    // section {
-    //     margin-top: -130px;
-    // }
+@media screen and (max-width: 920px) {
+    .scroll-down {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .email-address {
+        display: none
+    }
+}
+
+@media screen and (max-width: 550px) {
+    section {
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .social-links {
+        gap: 22px;
+    }
+
+    section {
+        height: 5vh;
+    }
+
+
 }

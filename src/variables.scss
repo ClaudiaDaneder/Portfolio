@@ -14,3 +14,12 @@ $background: #141D2F;
     align-items: center;
     justify-content: space-between;
 }
+
+:root {
+    --bar-width: 40px;
+    --bar-height: 3px;
+    --hamburger-gap: 12px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(--bar-height * 3 + --hamburger-gap * 2);
+    --x-width: calc(--hamburger-height * 1.41421356237);
+}

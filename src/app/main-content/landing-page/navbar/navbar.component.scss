@@ -1,18 +1,28 @@
 @import './../../../../variables.scss';
 
+
+$bar-width: 40px;
+$bar-height: 3px;
+$hamburger-gap: 12px;
+$animation-timing: 200ms ease-in-out;
+$hamburger-height: calc($bar-height * 3 + $hamburger-gap * 2);
+$x-width: calc($hamburger-height * 1.41421356237);
+
 * {
     margin: 0;
 }
 
-nav {
+.regular-menu {
     @include dFlexSB();
     background-color: $background;
     width: 100%;
     padding: 27px 100px;
     position: fixed;
     z-index: 9999;
+}
 
-
+.responsive-menu {
+    display: none;
 }
 
 .logo {
@@ -35,9 +45,11 @@ nav {
     }
 }
 
+
+
 @media screen and (max-width: 1020px) {
-    nav {
-        padding: 27px 32px
+    .regular-menu {
+        padding: 16px 32px
     }
 
     .nav-links {
@@ -47,5 +59,97 @@ nav {
 
     .logo {
         width: 50px
-    } 
+    }
+}
+
+
+
+@media screen and (max-width: 850px) {
+    .regular-menu {
+        display: none;
+    }
+
+    .responsive-menu {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: $hamburger-gap;
+        position: absolute;
+        top: 16px;
+        right: 32px;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+        content: "";
+        width: $bar-width;
+        height: $bar-height;
+        background-color: #fff;
+        border-radius: 9999px;
+        transition: opacity $animation-timing, width $animation-timing, rotate $animation-timing, translate $animation-timing;
+        transform-origin: left center;
+    }
+
+    .hamburger-menu input {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+
+        &:checked {
+            opacity: 0;
+            width: 0;
+        }
+    }
+
+    .hamburger-menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: $x-width;
+        translate: 0 calc($bar-height / -2);
+    }
+
+    .hamburger-menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: $x-width;
+        translate: 0 calc($bar-height / 2);
+
+    }
+
+    .sidebar {
+        translate: 100%;
+        transition: translate $animation-timing;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 998;
+        // background-color: $background;
+        background-color: rgba(81, 64, 64, 0.475);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 29px;
+        font-size: 23px;
+    }
+
+    .hamburger-menu:has(input:checked)+.sidebar {
+        translate: 0;
+    }
+
+    .sidebar nav:has(a:focus)+.sidebar {
+        translate: 100%;
+    }
+
 }

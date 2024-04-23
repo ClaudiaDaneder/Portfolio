@@ -9,8 +9,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-
 }
 
 .content {
@@ -20,21 +18,25 @@ section {
     background-color: $background;
     gap: 16px;
     line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
-h1 {
-    margin-bottom: 20px
-}
 
 .navigation-back {
-    @include dFlexSB
-
+    @include dFlexSB;
+    margin-bottom: 20px
 }
 
 .arrow {
     width: 50px;
     height: 50px;
     background-image: url(./../../assets/img/arrow-up_white.svg);
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(-90deg);
@@ -43,5 +45,18 @@ h1 {
     &:hover {
         background-image: url(./../../assets/img/arrow-up_orange.svg);
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .content {
+        padding: 60px 32px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .arrow {
+        width: 30px;
+        height: 30px;
     }
 }

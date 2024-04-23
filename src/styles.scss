@@ -101,7 +101,6 @@
 
 
 
-
 * {
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
@@ -202,17 +201,12 @@ h5 {
 
 .cdk-overlay-container {
   right: 0;
-
 }
 
 .mat-mdc-dialog-container .mdc-dialog__surface {
   background-color: $background !important;
   padding: 20px 30px;
 
-}
-
-.mat-mdc-dialog-container {
-  border-radius: 50px;
 }
 
 .mat-mdc-dialog-container-with-actions .mat-mdc-dialog-content {
@@ -233,6 +227,7 @@ h5 {
 
 .mat-mdc-dialog-actions {
   padding: var(--mat-dialog-actions-padding, 0) !important;
+  justify-content: end !important;
 
   button {
     background-color: $orange;
@@ -240,7 +235,7 @@ h5 {
     padding: 4px 16px;
     border: none;
     border-radius: 6px;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
 
     &:hover {
@@ -297,12 +292,50 @@ mat-dialog-content {
   }
 }
 
+
+@media screen and (max-width: 1000px) {
+  #cdk-overlay-0 {
+    width: 60% !important;
+  }
+}
+
+
 @media screen and (max-width: 550px) {
-  h1 {
+  h1, h3 {
     font-size: 35px;
   }
 
   h2 {
     font-size: 28px;
+  }
+
+  #cdk-overlay-0, .mat-mdc-dialog-container {
+    width: 99% !important;
+    max-width: unset;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+  
+  h5 {
+    font-size: 18px;
+  }
+
+  .mat-mdc-dialog-actions {
+  
+    button {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 23px;
   }
 }

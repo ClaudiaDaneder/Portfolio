@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+  closeSidebar(): void {
+    const checkbox = document.querySelector('#toggle-sidebar') as HTMLInputElement;
+    if (checkbox) {
+      checkbox.checked = false; // Close the sidebar when a link is clicked
+    }
+  }
 }

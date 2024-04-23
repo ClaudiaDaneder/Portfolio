@@ -1,5 +1,9 @@
 @import './../../../../variables.scss';
 
+* {
+    margin: 0;
+}
+
 ::-webkit-scrollbar {
     background-color: $background;
     width: 10px;
@@ -13,8 +17,12 @@
 
 }
 
-
-
 .content {
     padding-right: 16px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }

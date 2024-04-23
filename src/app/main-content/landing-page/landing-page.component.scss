@@ -177,9 +177,14 @@ h1 {
 
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 850px) {
+    section {
+        padding-top: 0;
+    }
+
     .name-plus-contact {
         flex-direction: column;
+        margin-top: -50px;
     }
 
     .contact-btn {
@@ -187,16 +192,68 @@ h1 {
     }
 
     .hero-container {
-        gap: 0px;
+        gap: 20px;
+    }
+
+    .hero-swoop {
+        top: 60%
     }
 }
 
 @media screen and (max-width: 550px) {
     .hero-swoop {
-        top: 65%;
+        top: 60%;
+    }
+
+    .hero-photo {
+        width: 100%;
     }
 
     .i-am {
-        font-size: 23px;
-      }
+        font-size: 26px;
+    }
+
+    .name-plus-contact {
+        margin-top: 20px;
+    }
+
+    h1 {
+        margin-bottom: -10px
+    }
+
+    .hero-container {
+        gap: 0
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .hero-swoop {
+        top: 56%
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .name-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .i-am {
+        transform: rotate(0);
+    }
+    
+    .name-plus-contact {
+        margin-top: 50px;
+    }
+
+    .hero-swoop {
+        top: 50%
+    }
 }

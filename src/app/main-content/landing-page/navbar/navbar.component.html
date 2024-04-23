@@ -1,8 +1,21 @@
 <nav>
-    <a href="#home"><img class="logo" src="./../../../assets/img/icon_white.png"></a>
-    <div class="nav-links">
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+    <div class="regular-menu">
+        <a href="#home"><img class="logo" src="./../../../assets/img/icon_white.png"></a>
+        <div class="nav-links">
+            <a href="#about-me">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </div>
+    <div class="responsive-menu">
+        <label class="hamburger-menu">
+            <input type="checkbox" id="toggle-sidebar">
+        </label>
+        <div class="sidebar">
+            <a href="#about-me" (click)="closeSidebar()">About me</a>
+            <a href="#skills" (click)="closeSidebar()">Skills</a>
+            <a href="#projects" (click)="closeSidebar()">Projects</a>
+            <a href="#contact" (click)="closeSidebar()">Contact</a>
+        </div>
     </div>
 </nav>

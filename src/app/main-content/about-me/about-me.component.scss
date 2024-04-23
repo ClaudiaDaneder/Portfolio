@@ -109,3 +109,15 @@ section {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 550px) {
+    .personal {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    
+        >img {
+            padding: 10px 10px 0 0px;
+        }
+    }
+}

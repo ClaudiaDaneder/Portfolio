@@ -239,13 +239,13 @@ input[type=checkbox] {
     @include dFlexSB;
     justify-content: flex-end;
     padding: 40px 0
-
 }
 
 .arrow {
     width: 50px;
     height: 50px;
     background-image: url(./../../../assets/img/arrow-up_white.svg);
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     transition: 100ms ease-in-out;
@@ -257,6 +257,11 @@ input[type=checkbox] {
 }
 
 @media screen and (max-width: 1020px) {
+
+    section {
+        padding: 0 32px
+    }
+
     .contact-container {
         flex-direction: column;
         justify-content: center;
@@ -264,10 +269,48 @@ input[type=checkbox] {
         gap: 0;
     }
 
-    .contact-text[_ngcontent-ng-c2074889222] {
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
+    .contact-form {
+        max-width: unset;
+    }
+
+    .contact-text {
         margin-bottom: 50px;
+    }
+
+    h3 {
+        left: 0px;
+
+        &::before {
+
+            left: -32px;
+            width: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .contact-form {
+        p {
+            font-size: 14px;
+        }
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+    }
+
+    .contact-text {
+        gap: 16px
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
     }
 }
