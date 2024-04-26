@@ -1,69 +1,76 @@
 <section id="projects">
     <h3>Portfolio</h3>
 
-    <p class="center">Here, you'll find a curated collection of my recent projects. Feel free to explore each one, test its functionality, or visit the GitHub repository for a closer look at the code. I hope you enjoy browsing through my work!</p>
+    <p class="center">Here, you'll find a curated collection of my recent projects. Feel free to explore each one, test
+        its functionality, or visit the GitHub repository for a closer look at the code. I hope you enjoy browsing
+        through my work!</p>
 
-
-    <div class="main-container">
-        <div class="element">
-            <img src="assets/img/join photo.png" alt="">
-            <div class="description">
-                <div class="description-text">
-                    <h4>Join</h4>
-                    <h5>JavaScript | HTML | CSS</h5>
-                    <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
-                        functions, assign users and categories.</p>
-                </div>
-                <div class="button-container">
-                    <button type="button" class="live-test-btn" (click)="forwardLiveTest('join/')">Live test</button>
-                    <button type="button" class="github-btn" (click)="forwardGithub('Join')">Github</button>
+    <div class="content">
+        <div class="main-container">
+            <div class="element">
+                <img src="assets/img/join photo.png" [@leftAnimation]="leftState">
+                <div class="description">
+                    <div class="description-text">
+                        <h4>Join</h4>
+                        <h5>JavaScript | HTML | CSS</h5>
+                        <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
+                            functions, assign users and categories.</p>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="live-test-btn" (click)="forwardLiveTest('join/')">Live
+                            test</button>
+                        <button type="button" class="github-btn" (click)="forwardGithub('Join')">Github</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="element element-reverse">
-            <img src="assets/img/pollo photo.png">
-            <div class="description description-reverse">
-                <div class="description-text">
-                    <h4>El Pollo Loco</h4>
-                    <h5>JavaScript | HTML | CSS</h5>
-                    <p>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco
-                        salsa to fight against the crazy hen.</p>
-                </div>
-                <div class="button-container">
-                    <button type="button" class="live-test-btn" (click)="forwardLiveTest('el-pollo-loco/')">Live
-                        test</button>
-                    <button type="button" class="github-btn" (click)="forwardGithub('El-Pollo-Loco')">Github</button>
+            <div class="element element-reverse">
+                <img src="assets/img/pollo photo.png">
+                <div class="description description-reverse">
+                    <div class="description-text">
+                        <h4>El Pollo Loco</h4>
+                        <h5>JavaScript | HTML | CSS</h5>
+                        <p>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and
+                            tabasco
+                            salsa to fight against the crazy hen.</p>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="live-test-btn" (click)="forwardLiveTest('el-pollo-loco/')">Live
+                            test</button>
+                        <button type="button" class="github-btn"
+                            (click)="forwardGithub('El-Pollo-Loco')">Github</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="element">
-            <img src="assets/img/Simple CRM photo.png">
-            <div class="description">
-                <div class="description-text">
-                    <h4>Simple CRM</h4>
-                    <h5>Angular | Firebase</h5>
-                    <p>A very Simple Customer Relationship Management system working with CRUD functionality.</p>
-                </div>
-                <div class="button-container">
-                    <button type="button" class="live-test-btn" disabled>COMING</button>
-                    <button type="button" class="github-btn" disabled>SOON</button>
+            <div class="element">
+                <img src="assets/img/Simple CRM photo.png">
+                <div class="description">
+                    <div class="description-text">
+                        <h4>Simple CRM</h4>
+                        <h5>Angular | Firebase</h5>
+                        <p>A very Simple Customer Relationship Management system working with CRUD functionality.</p>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="live-test-btn" disabled>COMING</button>
+                        <button type="button" class="github-btn" disabled>SOON</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="element element-reverse">
-            <img src="assets/img/Pokédex photo.png">
-            <div class="description description-reverse">
-                <div class="description-text">
-                    <h4>Pokédex</h4>
-                    <h5>JavaScript | HTML | CSS | API</h5>
-                    <p>Based on the PokéAPI a simple library that provides and catalogues pokemon information.</p>
-                </div>
-                <div class="button-container">
-                    <button type="button" class="live-test-btn" (click)="forwardLiveTest('pokedex/')">Live test</button>
-                    <button type="button" class="github-btn" (click)="forwardGithub('Pokedex')">Github</button>
+            <div class="element element-reverse">
+                <img src="assets/img/Pokédex photo.png">
+                <div class="description description-reverse">
+                    <div class="description-text">
+                        <h4>Pokédex</h4>
+                        <h5>JavaScript | HTML | CSS | API</h5>
+                        <p>Based on the PokéAPI a simple library that provides and catalogues pokemon information.</p>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="live-test-btn" (click)="forwardLiveTest('pokedex/')">Live
+                            test</button>
+                        <button type="button" class="github-btn" (click)="forwardGithub('Pokedex')">Github</button>
+                    </div>
                 </div>
             </div>
         </div>

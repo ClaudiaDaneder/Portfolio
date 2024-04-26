@@ -6,11 +6,12 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from '../shared/components/footer/footer.component';
+import { NavbarComponent } from '../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [LandingPageComponent, SocialsComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent ],
+  imports: [LandingPageComponent, SocialsComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, NavbarComponent ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

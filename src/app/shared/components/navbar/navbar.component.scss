@@ -12,13 +12,20 @@ $x-width: calc($hamburger-height * 1.41421356237);
     margin: 0;
 }
 
-.regular-menu {
-    @include dFlexSB();
-    background-color: $background;
+.content {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    padding: 27px 100px;
     position: fixed;
     z-index: 9999;
+    background-color: $background;
+}
+
+.regular-menu {
+    @include dFlexSB();
+    width: 100%;
+    max-width: 1440px;
+    padding: 27px 100px;
 }
 
 .responsive-menu {
@@ -65,12 +72,20 @@ $x-width: calc($hamburger-height * 1.41421356237);
 
 
 @media screen and (max-width: 850px) {
+
+    .content {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
     .regular-menu {
         display: none;
     }
 
     .responsive-menu {
         display: flex;
+        padding: 32px
     }
 
     .hamburger-menu {

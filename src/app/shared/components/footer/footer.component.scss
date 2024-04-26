@@ -6,12 +6,17 @@
 
 footer {
     background-color: $background;
-    padding: 50px 100px;
     border-top: 4px solid $orange;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include dFlexCenter();
     width: 100%;
+    z-index: 9999;
+}
+
+.content {
+    max-width: 1440px;
+    @include dFlexSB();
+    width: 100%;
+    padding: 50px 100px;
 }
 
 .logo {

@@ -8,8 +8,7 @@ section {
     background-color: $background;
     height: 100vh;
     z-index: 1;
-    display: flex;
-    align-items: center;
+    @include dFlexCenter();
     padding-top: 150px;
     width: 100%;
 }
@@ -27,25 +26,41 @@ h1 {
 
 
 .hero-container {
-    @include dFlexSB();
+    @include dFlexCenter();
     width: 100%;
-    padding-right: 100px
+    height: 100%;
+    padding-right: 100px;
+    max-width: 1440px;
 }
 
 .photo-container {
-    @include dFlexCenter();
     background-image: url(./../../../assets/img/photo-shadows.png);
-    background-size: cover;
-    background-position: right 35% top 0%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.text-container {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    @include dFlexCenter();
+    height: 100%;
+    width: auto;
 }
 
 .hero-photo {
-    max-width: 600px;
-    width: 100%;
-    height: auto;
     filter: contrast(110%);
+    height: 80%;
+    bottom: 0;
     z-index: 0;
+    position: absolute;
 }
+
 
 .name-container {
     display: flex;
@@ -87,33 +102,23 @@ h1 {
     }
 }
 
-.hero-swoop {
-    background-image: url(./../../../assets/img/hero-swoop2.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 70%;
-    z-index: 0;
-}
-
-
 .name-plus-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-left: -100px;
+    height: 100%;
+    width: auto;
 }
+
+
 
 @media screen and (max-width: 1400px) {
     .i-am {
         font-size: 44px;
     }
 
-    .hero-swoop {
-        top: 73%;
-    }
 }
 
 @media screen and (max-width: 1245px) {
@@ -129,17 +134,8 @@ h1 {
     .hero-photo {
         max-width: 580px;
     }
-
-    .hero-swoop {
-        top: 70%;
-    }
 }
 
-@media screen and (max-width: 1090px) {
-    .hero-swoop {
-        top: 71%
-    }
-}
 
 @media screen and (max-width: 1020px) {
     .hero-container {
@@ -171,9 +167,6 @@ h1 {
         margin: 0;
     }
 
-    .hero-swoop {
-        top: 67%;
-    }
 
 }
 
@@ -194,16 +187,9 @@ h1 {
     .hero-container {
         gap: 20px;
     }
-
-    .hero-swoop {
-        top: 60%
-    }
 }
 
 @media screen and (max-width: 550px) {
-    .hero-swoop {
-        top: 60%;
-    }
 
     .hero-photo {
         width: 100%;
@@ -233,12 +219,6 @@ h1 {
     }
 }
 
-@media screen and (max-width: 450px) {
-    .hero-swoop {
-        top: 56%
-    }
-}
-
 @media screen and (max-width: 390px) {
     .name-container {
         flex-direction: column;
@@ -248,12 +228,8 @@ h1 {
     .i-am {
         transform: rotate(0);
     }
-    
+
     .name-plus-contact {
         margin-top: 50px;
-    }
-
-    .hero-swoop {
-        top: 50%
     }
 }

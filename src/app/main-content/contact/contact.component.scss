@@ -9,25 +9,29 @@ section {
     background-image: url(./../../../assets/img/shadow-contact-red.png);
     background-repeat: no-repeat;
     background-position: top 100% left 0;
-    background-size: 33%;
-    padding: 0 100px;
+    background-size: 400px;
+
     scroll-margin-top: 7rem;
+    @include dFlexCenter();
+}
+
+.content {
+    max-width: 1440px;
+    padding: 0 100px
 }
 
 h3 {
     position: relative;
-
+    left: 80px;
 
     &::before {
-        border: $darkorange 2px solid;
+        border-top: $darkorange 4px solid;
         content: "";
         position: absolute;
-        left: -100px;
+        left: -80px;
         top: 50%;
-        width: 50px;
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-
+        width: 60px;
+        border-radius: 4px;
     }
 }
 

@@ -5,25 +5,29 @@
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    padding: 160px 0;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    padding: 0 100px;
     background-color: $background;
     gap: 16px;
     line-height: 1.6;
+    max-width: 1440px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     -ms-hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+    z-index: 0;
 }
 
 

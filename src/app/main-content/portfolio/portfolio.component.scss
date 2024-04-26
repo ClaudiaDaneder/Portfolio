@@ -6,11 +6,12 @@
 
 section {
     background-color: $background;
-    padding: 100px 32px;
+    padding: 15vh 32px;
     background-image: url(./../../../assets/img/shadow-portfolio-red.png), url(./../../../assets/img/shadow-portfolio-orange.png);
     background-repeat: no-repeat;
-    background-size: 40%, 40%;
+    background-size: 400px, 350px;
     background-position: left 0% top 23%, right 0 bottom 0;
+    scroll-margin-top: 6vh;
 }
 
 h3 {
@@ -18,30 +19,37 @@ h3 {
     position: relative;
 
     &::before {
-        border: $darkorange 2px solid;
-        width: 10%;
+        border-top: $darkorange 4px solid;
+        width: calc(50% - 180px + 32px);
         content: "";
         position: absolute;
         right: calc(50% + 180px);
         top: 50%;
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
+        border-radius: 4px;
     }
 
     &::after {
-        border: $darkorange 2px solid;
+        border-top: $darkorange 4px solid;
         width: calc(50% - 180px + 32px);
         content: "";
         position: absolute;
         right: -32px;
         top: 50%;
+        border-radius: 4px;
     }
 }
 
 .center {
     text-align: center;
     width: 60%;
+    max-width: 1440px;
+    padding: 0 100px;
     margin: auto;
+}
+
+.content {
+    @include dFlexCenter();
+    position: relative;
 }
 
 .main-container {
@@ -49,19 +57,17 @@ h3 {
     flex-direction: column;
     gap: 100px;
     margin: 120px 0;
+    max-width: 1440px;
 
 }
 
 .element {
     display: flex;
     justify-content: flex-end;
-    margin-right: 100px;
 }
 
 .element-reverse {
     flex-direction: row-reverse;
-    margin-left: 100px;
-    margin-right: 0;
 }
 
 .description {
@@ -70,14 +76,14 @@ h3 {
     flex-direction: column;
     justify-content: flex-end;
     gap: 35px;
-    margin-left: 35px;
+    padding-left: 35px;
 }
 
 .description-reverse {
     align-items: flex-end;
     text-align: right;
     margin-left: 0;
-    margin-right: 35px;
+    padding-right: 35px;
 }
 
 .description-text {
