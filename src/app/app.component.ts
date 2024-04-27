@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { TranslationService } from './translation.service';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(httpClient);
+  return new TranslateHttpLoader(httpClient, '/angular-projects/portfolio/assets/i18n/', '.json');
 }
 
 @Component({
