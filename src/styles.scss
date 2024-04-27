@@ -182,13 +182,13 @@ h5 {
 
 ::-webkit-scrollbar {
   background-color: $background;
-  width: 32px
+  width: 16px
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: $darkorange;
   border-radius: 20px;
-  border: 12px solid $background;
+  border: 6px solid $background;
   cursor: pointer;
 }
 
@@ -206,7 +206,6 @@ h5 {
 .mat-mdc-dialog-container .mdc-dialog__surface {
   background-color: $background !important;
   padding: 20px 30px;
-
 }
 
 .mat-mdc-dialog-container-with-actions .mat-mdc-dialog-content {
@@ -217,7 +216,10 @@ h5 {
   color: $orange !important;
   font-size: 24px !important;
   text-align: center;
+}
 
+.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__container, .mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__surface {
+  border-radius: 20px;
 }
 
 .mat-mdc-dialog-title {
@@ -317,13 +319,13 @@ mat-dialog-content {
   h4 {
     font-size: 24px;
   }
-  
+
   h5 {
     font-size: 18px;
   }
 
   .mat-mdc-dialog-actions {
-  
+
     button {
       font-size: 14px;
     }

@@ -38,6 +38,8 @@ h1 {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    position: relative;
+    @include dFlexCenter;
 }
 
 .text-container {
@@ -47,15 +49,16 @@ h1 {
 
 .image {
     @include dFlexCenter();
-    height: 100%;
     width: auto;
+    position: absolute;
+    bottom: 0;
+    height: 76vh;
+    max-height: 100%;
 }
 
 .hero-photo {
     filter: contrast(110%);
-    height: 80%;
-    bottom: 0;
-    position: absolute;
+    height: 100%;
 }
 
 
@@ -120,10 +123,6 @@ h1 {
 
 @media screen and (max-width: 1245px) {
 
-    section {
-        padding-top: 80px;
-    }
-
     .i-am {
         font-size: 34px;
     }
@@ -134,51 +133,50 @@ h1 {
     .hero-container {
         padding-right: 32px
     }
-
 }
 
 @media screen and (max-width: 920px) {
 
     .hero-container {
-        flex-direction: column;
-        gap: 30px;
+        flex-direction: column-reverse;
+        padding: 0 32px;
+    }
+
+    .image {
+        max-height: 60vh;
+    }
+
+    .photo-container {
         justify-content: flex-end;
-        padding: 0
+        background-position: right;
     }
 
     .name-plus-contact {
         margin-left: 0;
         position: relative;
         z-index: 2;
-        flex-direction: row;
+
+    }
+
+    .text-container {
+        @include dFlexSB();
         width: 100%;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .contact-btn {
-        margin: 0;
-    }
-
-
-}
-
-@media screen and (max-width: 850px) {
-    section {
-        padding-top: 0;
-    }
-
-    .name-plus-contact {
-        flex-direction: column;
-        margin-top: -50px;
     }
 
     .contact-btn {
         margin-top: 15px;
     }
+}
 
-    .hero-container {
-        gap: 20px;
+@media screen and (max-width: 660px) {
+    .image {
+        max-height: 50vh;
+    }
+
+    .photo-container,
+    .text-container {
+        justify-content: center;
+        background-position: center;
     }
 }
 
@@ -220,5 +218,11 @@ h1 {
 
     .name-plus-contact {
         margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 2600px) {
+    .image {
+        max-height: 65vh;
     }
 }

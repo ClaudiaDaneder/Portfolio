@@ -109,25 +109,25 @@ section {
 
 .skills-text {
     text-align: right;
-    width: 90%;
+    margin-left: 50px;
     p {
         position: relative;
-        right: 60px;
+        right: 100px;
     }
 }
 
 h3 {
     position: relative;
-    right: 60px;
+    right: 100px;
     margin-bottom: 10px;
 
     &::after {
         border-top: $darkorange 4px solid;
         content: "";
         position: absolute;
-        right: -80px;
+        right: -100px;
         top: 50%;
-        width: 60px;
+        width: 80px;
         border-radius: 4px;
     }
 }
@@ -137,6 +137,7 @@ h3 {
     .skills-container {
         flex-direction: column-reverse;
         padding: 80px 32px;
+        gap: 80px;
     }
 
     h3 {
@@ -146,6 +147,20 @@ h3 {
             right: -32px;
             width: 20px;
         }
+    }
+
+    .skills-text p {
+        left: 0
+    }
+
+    .skills-text-container {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    section {
+        background-size: 25%;
     }
 }
 
@@ -158,6 +173,8 @@ h3 {
         gap: 32px;
 
     }
+
+
 }
 
 @media screen and (max-width: 500px) {

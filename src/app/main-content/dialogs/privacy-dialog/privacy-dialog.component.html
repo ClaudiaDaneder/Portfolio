@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Privacy Policy</h1>
+<h1 mat-dialog-title>{{ 'privacy.title' | translate }}</h1>
 <mat-dialog-content>
 
     <div class="content">
@@ -21,5 +21,5 @@
     </div>
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">Close</button>
+    <button mat-button (click)="onNoClick()">{{ 'privacy.button' | translate }}</button>
 </mat-dialog-actions>

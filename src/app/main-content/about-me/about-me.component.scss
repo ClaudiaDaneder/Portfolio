@@ -44,18 +44,6 @@ section {
     }
 }
 
-// .orange_line {
-//     width: calc(40% - 100px);
-//     height: 4px;
-//     border-top: $orange 4px solid;
-//     content: "";
-//     position: absolute;
-//     right: 0;
-//     top: 50%;
-//     border-top-left-radius: 4px;
-//     border-bottom-left-radius: 4px;
-// }
-
 .about-me-text {
     max-width: 40%;
     display: flex;
@@ -89,7 +77,8 @@ section {
 
 @media screen and (max-width: 1020px) {
     .about-me-container {
-        padding: 80px 32px
+        padding: 80px 32px;
+        display: block;
     }
 
     .photo,
@@ -103,12 +92,18 @@ section {
     }
 }
 
+@media screen and (max-width: 700px) {
+    section {
+        background-size: 25%;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .personal {
         display: flex;
         gap: 16px;
         align-items: flex-start;
-    
+
         >img {
             padding: 10px 10px 0 0px;
         }

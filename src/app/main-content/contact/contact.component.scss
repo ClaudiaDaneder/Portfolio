@@ -9,7 +9,7 @@ section {
     background-image: url(./../../../assets/img/shadow-contact-red.png);
     background-repeat: no-repeat;
     background-position: top 100% left 0;
-    background-size: 400px;
+    background-size: 360px;
 
     scroll-margin-top: 7rem;
     @include dFlexCenter();
@@ -260,9 +260,20 @@ input[type=checkbox] {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .contact-container {
+        gap: 50px
+    }
+}
+
 @media screen and (max-width: 1020px) {
 
     section {
+        display: block;
+        background-size: 160px;
+    }
+
+    .content {
         padding: 0 32px
     }
 
@@ -275,6 +286,7 @@ input[type=checkbox] {
 
     .contact-form {
         max-width: unset;
+        width: 80%
     }
 
     .contact-text {

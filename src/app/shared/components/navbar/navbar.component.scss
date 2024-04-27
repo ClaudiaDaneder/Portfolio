@@ -12,12 +12,17 @@ $x-width: calc($hamburger-height * 1.41421356237);
     margin: 0;
 }
 
+nav {
+    z-index: 9999;
+}
+
 .content {
     display: flex;
     justify-content: center;
     width: 100%;
     position: fixed;
-    z-index: 9999;
+    top: 0;
+    z-index: 999;
     background-color: $background;
 }
 
@@ -88,6 +93,10 @@ $x-width: calc($hamburger-height * 1.41421356237);
         justify-content: flex-start;
     }
 
+    .logo {
+        width: 40px
+    }
+
 
     .regular-menu {
         display: none;
@@ -95,16 +104,18 @@ $x-width: calc($hamburger-height * 1.41421356237);
 
     .responsive-menu {
         display: flex;
-        padding: 32px
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 
     .hamburger-menu {
         display: flex;
         flex-direction: column;
         gap: $hamburger-gap;
-        position: absolute;
-        top: 32px;
-        right: 32px;
         z-index: 999;
         cursor: pointer;
     }
@@ -166,6 +177,12 @@ $x-width: calc($hamburger-height * 1.41421356237);
         justify-content: center;
         gap: 29px;
         font-size: 23px;
+    }
+
+    .sidebar .language-btn {
+        position: absolute;
+        top: 34px;
+        left: 32px;
     }
 
     .hamburger-menu:has(input:checked)+.sidebar {

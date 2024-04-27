@@ -17,8 +17,8 @@
                         <input formControlName="name" type="text" placeholder="{{'contact.your-name' | translate }}"
                             name="name">
                         <div
-                            [ngClass]="{'alert-transparent': contactForm.controls['name'].valid || contactForm.controls['name'].pristine, 'alert-visible': !contactForm.controls['name'].valid && !contactForm.controls['name'].pristine && contactForm.controls['name'].errors?.['required']}">
-                            Your name is required
+                            [ngClass]="{'alert-transparent': contactForm.controls['name'].valid || contactForm.controls['name'].pristine, 'alert-visible': !contactForm.controls['name'].valid && contactForm.controls['name'].touched && contactForm.controls['name'].errors?.['required']}">
+                            {{ 'form.name' | translate }}
                         </div>
                     </div>
                     <div class="input-wrapper">
@@ -26,13 +26,13 @@
                             name="email">
                         <ng-container>
                             <div class="alert-transparent">placeholder</div>
-                            <div *ngIf="contactForm.controls['email'].errors?.['required'] && (contactForm.controls['email'].touched || contactForm.controls['email'].value !== '')"
+                            <div *ngIf="contactForm.controls['email'].errors?.['required'] && (contactForm.controls['email'].touched)"
                                 class="alert-visible" style="margin-bottom: -20.5px;">
-                                Your email is required
+                                {{ 'form.email' | translate }}
                             </div>
-                            <div *ngIf="contactForm.controls['email'].errors?.['email'] && !contactForm.controls['email'].errors?.['required'] && (contactForm.controls['email'].touched || contactForm.controls['email'].value !== '')"
+                            <div *ngIf="contactForm.controls['email'].errors?.['pattern'] && !contactForm.controls['email'].errors?.['required'] && (contactForm.controls['email'].touched)"
                                 class="alert-visible" style="margin-bottom: -20.5px;">
-                                Invalid email format
+                                {{ 'form.format' | translate }}
                             </div>
                         </ng-container>
 
@@ -41,8 +41,9 @@
                         <textarea formControlName="message" rows="6"
                             placeholder="{{'contact.your-message' | translate }}" name="message"></textarea>
                         <div
-                            [ngClass]="{'alert-transparent': contactForm.controls['message'].valid || contactForm.controls['message'].pristine, 'alert-visible': !contactForm.controls['message'].valid && !contactForm.controls['message'].pristine && contactForm.controls['message'].errors?.['required']}">
-                            Your message is empty</div>
+                            [ngClass]="{'alert-transparent': contactForm.controls['message'].valid || contactForm.controls['message'].pristine, 'alert-visible': !contactForm.controls['message'].valid && contactForm.controls['message'].touched && contactForm.controls['message'].errors?.['required']}">
+                            {{ 'form.message' | translate }}
+                        </div>
                     </div>
                 </div>
                 <div class="checkbox-wrapper">
@@ -53,7 +54,8 @@
                 </div>
                 <div
                     [ngClass]="{'privacy-alert-transparent': contactForm.controls['privacyPolicy'].valid || contactForm.controls['privacyPolicy'].pristine, 'privacy-alert-visible': !contactForm.controls['privacyPolicy'].valid && !contactForm.controls['privacyPolicy'].pristine && contactForm.controls['privacyPolicy'].errors?.['required']}">
-                    Please accept the privacy policy.</div>
+                    {{ 'form.privacy' | translate }}
+                </div>
                 <button type="submit" class="contact-btn" [disabled]="contactForm.invalid">{{ 'contact.button' | translate }}</button>
             </form>
 

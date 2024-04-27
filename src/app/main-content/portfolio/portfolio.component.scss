@@ -41,9 +41,8 @@ h3 {
 
 .center {
     text-align: center;
-    width: 60%;
+    width: 80%;
     max-width: 1440px;
-    padding: 0 100px;
     margin: auto;
 }
 
@@ -82,7 +81,7 @@ h3 {
 .description-reverse {
     align-items: flex-end;
     text-align: right;
-    margin-left: 0;
+    padding-left: 0;
     padding-right: 35px;
 }
 
@@ -227,14 +226,14 @@ h3 {
     .description {
         justify-content: center;
         align-items: center;
-        margin: 0;
+        padding: 0;
         text-align: center;
     }
 
     .description-reverse {
         align-items: center;
         text-align: center;
-        margin: 0
+        padding: 0
     }
 
     .description-text {
@@ -251,6 +250,10 @@ h3 {
         img {
             width: 100%
         }
+    }
+
+    section {
+        background-size: 25%, 25%;
     }
 }
 

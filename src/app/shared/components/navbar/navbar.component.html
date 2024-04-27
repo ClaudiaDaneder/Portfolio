@@ -16,10 +16,11 @@
             <input type="checkbox" id="toggle-sidebar">
         </label>
         <div class="sidebar">
-            <a href="#about-me" (click)="closeSidebar()">About me</a>
-            <a href="#skills" (click)="closeSidebar()">Skills</a>
-            <a href="#projects" (click)="closeSidebar()">Projects</a>
-            <a href="#contact" (click)="closeSidebar()">Contact</a>
+            <button type="button" (click)="toggleLanguage()" class="language-btn">{{ 'nav.language' | translate }}</button>
+            <a href="#about-me" (click)="closeSidebar()">{{ 'nav.about-me' | translate }}</a>
+            <a href="#skills" (click)="closeSidebar()">{{ 'nav.skills' | translate }}</a>
+            <a href="#projects" (click)="closeSidebar()">{{ 'nav.projects' | translate }}</a>
+            <a href="#contact" (click)="closeSidebar()">{{ 'contact.contact' | translate }}</a>
         </div>
     </div>
 </nav>
