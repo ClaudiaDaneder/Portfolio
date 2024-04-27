@@ -3,9 +3,10 @@
     <div class="regular-menu">
         <a href="#home"><img class="logo" src="assets/img/icon_white.png"></a>
         <div class="nav-links">
-            <a href="#about-me">About me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="#about-me">{{ 'nav.about-me' | translate }}</a>
+            <a href="#skills">{{ 'nav.skills' | translate }}</a>
+            <a href="#projects">{{ 'nav.projects' | translate }}</a>
+            <button type="button" (click)="toggleLanguage()" class="language-btn">{{ 'nav.language' | translate }}</button>
         </div>
     </div>
     </div>

@@ -22,15 +22,15 @@ section {
 
 h3 {
     position: relative;
-    left: 80px;
+    left: 0px;
 
     &::before {
         border-top: $darkorange 4px solid;
         content: "";
         position: absolute;
-        left: -80px;
+        left: -100px;
         top: 50%;
-        width: 60px;
+        width: 80px;
         border-radius: 4px;
     }
 }

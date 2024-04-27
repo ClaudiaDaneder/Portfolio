@@ -5,19 +5,24 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { PrivacyDialogComponent } from './../dialogs/privacy-dialog/privacy-dialog.component';
 import { SentMessageDialogComponent } from '../dialogs/sent-message-dialog/sent-message-dialog.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   templateUrl: './contact.component.html',
-  imports: [ReactiveFormsModule, CommonModule, MatDialogModule, MatButtonModule, PrivacyDialogComponent],
+  imports: [ReactiveFormsModule, CommonModule, MatDialogModule, MatButtonModule, PrivacyDialogComponent, TranslateModule],
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
   contactForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, public privacyPolicyDialog: MatDialog, public sentDialog: MatDialog) {
+  constructor(
+    private formBuilder: FormBuilder,
+    public privacyPolicyDialog: MatDialog,
+    public sentDialog: MatDialog
+  ) {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -47,7 +52,7 @@ export class ContactComponent {
 
   openPrivacyPolicy(): void {
     this.privacyPolicyDialog.open(PrivacyDialogComponent, {
-      width: '40%',
+      width: '50%',
       autoFocus: false,
     });
   }
@@ -55,7 +60,5 @@ export class ContactComponent {
   openSentDialog(): void {
     this.sentDialog.open(SentMessageDialogComponent);
   }
+
 }
-
-
-

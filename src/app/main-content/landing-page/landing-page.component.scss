@@ -14,9 +14,7 @@ section {
 }
 
 .i-am {
-    transform: rotate(-90deg);
     font-size: 58px;
-    margin-top: 4px;
     text-wrap: nowrap;
 }
 
@@ -64,8 +62,8 @@ h1 {
 
 .name-container {
     display: flex;
-    align-items: center;
     text-wrap: nowrap;
+    flex-direction: column;
 }
 
 .name {
@@ -130,10 +128,6 @@ h1 {
     .i-am {
         font-size: 34px;
     }
-
-    .hero-photo {
-        max-width: 580px;
-    }
 }
 
 
@@ -190,10 +184,6 @@ h1 {
 }
 
 @media screen and (max-width: 550px) {
-
-    .hero-photo {
-        width: 100%;
-    }
 
     .i-am {
         font-size: 26px;

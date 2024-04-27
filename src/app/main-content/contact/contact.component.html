@@ -1,28 +1,29 @@
 <section id="contact">
     <div class="content">
-        <h3>Contact</h3>
+        <h3>{{'contact.contact' | translate }}</h3>
 
         <div class="contact-container">
             <div class="contact-text">
-                <h4>Got a problem to solve?</h4>
-                <p>Feel free to drop me a message using this contact form. </p>
-                <p>I'm eager to hear from you, learn about your ideas, and collaborate on projects to bring them to life
-                    with my skills.</p>
+                <h4>{{'contact.problem' | translate }}</h4>
+                <p>{{'contact.drop-message' | translate }}</p>
+                <p>{{'contact.hear' | translate }}</p>
             </div>
 
 
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form" action="https://formspree.io/f/xgegrbjr"
-            method="POST">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form"
+                action="https://formspree.io/f/xgegrbjr" method="POST">
                 <div class="input-fields">
                     <div class="input-wrapper">
-                        <input formControlName="name" type="text" placeholder="Your name" name="name">
+                        <input formControlName="name" type="text" placeholder="{{'contact.your-name' | translate }}"
+                            name="name">
                         <div
                             [ngClass]="{'alert-transparent': contactForm.controls['name'].valid || contactForm.controls['name'].pristine, 'alert-visible': !contactForm.controls['name'].valid && !contactForm.controls['name'].pristine && contactForm.controls['name'].errors?.['required']}">
                             Your name is required
                         </div>
                     </div>
                     <div class="input-wrapper">
-                        <input formControlName="email" type="email" placeholder="Your email" name="email">
+                        <input formControlName="email" type="email" placeholder="{{'contact.your-email' | translate }}"
+                            name="email">
                         <ng-container>
                             <div class="alert-transparent">placeholder</div>
                             <div *ngIf="contactForm.controls['email'].errors?.['required'] && (contactForm.controls['email'].touched || contactForm.controls['email'].value !== '')"
@@ -37,7 +38,8 @@
 
                     </div>
                     <div class="input-wrapper">
-                        <textarea formControlName="message" rows="6" placeholder="Your message" name="message"></textarea>
+                        <textarea formControlName="message" rows="6"
+                            placeholder="{{'contact.your-message' | translate }}" name="message"></textarea>
                         <div
                             [ngClass]="{'alert-transparent': contactForm.controls['message'].valid || contactForm.controls['message'].pristine, 'alert-visible': !contactForm.controls['message'].valid && !contactForm.controls['message'].pristine && contactForm.controls['message'].errors?.['required']}">
                             Your message is empty</div>
@@ -45,14 +47,14 @@
                 </div>
                 <div class="checkbox-wrapper">
                     <input type="checkbox" formControlName="privacyPolicy">
-                    <p>I have read the <a (click)="openPrivacyPolicy()">privacy policy</a> and agree to the processing
-                        of my
-                        data as outlined.</p>
+                        <p>{{ 'contact.i-have-read' | translate }}
+                            <a (click)="openPrivacyPolicy()">{{ 'contact.link' | translate }}</a>
+                            {{ 'contact.agree' | translate }}</p>
                 </div>
                 <div
                     [ngClass]="{'privacy-alert-transparent': contactForm.controls['privacyPolicy'].valid || contactForm.controls['privacyPolicy'].pristine, 'privacy-alert-visible': !contactForm.controls['privacyPolicy'].valid && !contactForm.controls['privacyPolicy'].pristine && contactForm.controls['privacyPolicy'].errors?.['required']}">
                     Please accept the privacy policy.</div>
-                <button type="submit" class="contact-btn" [disabled]="contactForm.invalid">Send Email</button>
+                <button type="submit" class="contact-btn" [disabled]="contactForm.invalid">{{ 'contact.button' | translate }}</button>
             </form>
 
         </div>

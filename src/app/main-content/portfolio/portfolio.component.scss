@@ -58,7 +58,7 @@ h3 {
     gap: 100px;
     margin: 120px 0;
     max-width: 1440px;
-
+    overflow-x: hidden;
 }
 
 .element {
@@ -163,6 +163,14 @@ h3 {
             cursor: default;
         }
     }
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-30%);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(30%);
 }
 
 @media screen and (max-width: 1400px) {

@@ -52,6 +52,15 @@ $x-width: calc($hamburger-height * 1.41421356237);
     }
 }
 
+.language-btn {
+    background-color: transparent;
+    outline: none;
+    border: 1px $orange solid;
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 4px 6px;
+}
+
 
 
 @media screen and (max-width: 1020px) {

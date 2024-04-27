@@ -1,0 +1,74 @@
+{
+    "nav": {
+        "about-me": "Über mich",
+        "skills": "Skills",
+        "projects": "Projekte",
+        "language": "EN"
+    },
+    "landing-page": {
+        "i-am": "Ich bin",
+        "contact-me": "Kontakt aufnehmen"
+    },
+    "socials": {
+        "scroll-down": "nach unten scrollen"
+    },
+    "about-me": {
+        "about-me": "Über mich",
+        "intro": "In meiner beruflichen Laufbahn habe ich einen Einblick in HTML und CSS erhalten und schnell festgestellt, dass mich die Gestaltung und Umsetzung fasziniert.",
+        "puzzle": "Das Coden ist für mich wie das Knacken eines Rätsels oder das Lösen eines komplexen Puzzles – ich liebe es, kreative Ideen umzusetzen und an herausfordernden Projekten zu tüfteln. Mein oberstes Ziel ist es, das bestmögliche Ergebnis zu erzielen, das nicht nur ansprechend, sondern auch benutzerfreundlich ist.",
+        "bulb": "Mit einem ausgeprägten Auge für Details und einer präzisen Arbeitsweise sorge ich dafür, dass jedes Projekt bis ins kleinste Detail perfektioniert wird."
+    },
+    "skills": {
+        "skill-set": "Meine Skills",
+        "text": "Meine Fähigkeiten sind wie ein gut sortierter Werkzeugkasten – vielseitig und einsatzbereit, um jedes Projekt mit Kreativität und Präzision umzusetzen.",
+        "button": "Zum Kontakt"
+    },
+    "portfolio": {
+        "intro": "Hier finden Sie eine sorgfältig zusammengestellte Sammlung meiner neuesten Projekte. Erkunden Sie gerne jedes einzelne, testen Sie dessen Funktionalität oder besuchen Sie das GitHub-Repository, um einen genaueren Blick auf den Code zu werfen. Ich hoffe, Sie haben Freude beim Durchstöbern meiner Arbeit!",
+        "join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+        "pollo-loco": "Jump and Run Game mit objektorientiertem Ansatz. Helfen Sie Pepe, Münzen zu finden und Tabascoflaschen zu werfen, um gegen das verrückte Huhn zu kämpfen.",
+        "crm": "Ein einfaches Kundenbeziehungsmanagement-System, das mit CRUD-Funktionalität arbeitet.",
+        "pokedex": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    },
+    "contact": {
+        "contact": "Kontakt",
+        "problem": "Sie haben ein Problem, das gelöst werden muss?",
+        "drop-message": "Senden Sie mir gerne eine Nachricht über dieses Kontaktformular.",
+        "hear": "Ich freue mich darauf, von Ihnen zu hören, mehr über Ihre Ideen zu erfahren und gemeinsam Projekte zum Leben zu erwecken.",
+        "your-name": "Ihr Name",
+        "your-email": "Ihre E-Mail-Adresse",
+        "your-message": "Ihre Nachricht an mich",
+        "i-have-read": "Ich habe die",
+        "link": "Datenschutzerklärung",
+        "agree": "gelesen und stimme der Verarbeitung meiner Daten gemäß den darin dargelegten Bedingungen zu.",
+        "button": "Absenden"
+    },
+    "footer": {
+        "imprint": "Impressum"
+    },
+
+    "imprint": {
+        "title": "Impressum",
+        "info": "Informationen und Offenlegung gemäß §5 (1) ECG, § 25 MedienG, § 63 GewO und § 14 UGB",
+        "owner": "Webseitenbetreiber",
+        "address": "Anschrift",
+        "contact": "Kontaktdaten",
+        "tel": "Telefon",
+        "email": "E-Mail",
+        "legal": "Anwendbare Rechtsvorschrift",
+        "online": "Online Streitbeilegung",
+        "odr": "Verbraucher, welche in Österreich oder in einem sonstigen Vertragsstaat der ODR-VO niedergelassen sind, haben die Möglichkeit Probleme bezüglich dem entgeltlichen Kauf von Waren oder Dienstleistungen im Rahmen einer Online-Streitbeilegung (nach OS, AStG) zu lösen. Die Europäische Kommission stellt eine Plattform hierfür bereit",
+        "copyright": "Urheberrecht",
+        "copyright-text": "Die Inhalte dieser Webseite unterliegen, soweit dies rechtlich möglich ist, diversen Schutzrechten (z.B dem Urheberrecht). Jegliche Verwendung/Verbreitung von bereitgestelltem Material, welche urheberrechtlich untersagt ist, bedarf schriftlicher Zustimmung des Webseitenbetreibers.",
+        "disclaimer": "Haftungsausschluss",
+        "disclaimer-1": "Trotz sorgfältiger inhaltlicher Kontrolle übernimmt der Webseitenbetreiber dieser Webseite keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Sollten Sie dennoch auf ausgehende Links aufmerksam werden, welche auf eine Webseite mit rechtswidriger Tätigkeit/Information verweisen, ersuchen wir um dementsprechenden Hinweis, um diese nach § 17 Abs. 2 ECG umgehend zu entfernen.",
+        "disclaimer-2": "Die Urheberrechte Dritter werden vom Betreiber dieser Webseite mit größter Sorgfalt beachtet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden derartiger Rechtsverletzungen werden wir den betroffenen Inhalt umgehend entfernen.",
+        "source": "Quelle"
+    },
+    "thanks": "Vielen Dank für Ihre Nachricht!",
+    "privacy": {
+        "title": "Datenschutzerklärung",
+        "1": "<p>Wir freuen uns sehr, dass Sie Interesse an unserem Unternehmen gezeigt haben. Datenschutz hat für die Geschäftsleitung von Claudia Daneder eine besonders hohe Priorität. Die Nutzung der Internetseiten von Claudia Daneder ist grundsätzlich ohne Angabe personenbezogener Daten möglich. Wenn jedoch eine betroffene Person über unsere Website spezielle Unternehmensdienste nutzen möchte, kann die Verarbeitung personenbezogener Daten erforderlich werden. Wenn die Verarbeitung personenbezogener Daten erforderlich ist und es keine gesetzliche Grundlage für eine solche Verarbeitung gibt, holen wir in der Regel die Einwilligung der betroffenen Person ein.</p><p>Die Verarbeitung personenbezogener Daten wie Name, Adresse, E-Mail-Adresse oder Telefonnummer einer betroffenen Person erfolgt immer im Einklang mit der Datenschutz-Grundverordnung (DSGVO) und gemäß den länderspezifischen Datenschutzbestimmungen, die für Claudia Daneder gelten. Durch diese Datenschutzerklärung möchte unser Unternehmen die Öffentlichkeit über Art, Umfang und Zweck der von uns erhobenen, genutzten und verarbeiteten personenbezogenen Daten informieren. Darüber hinaus werden betroffene Personen durch diese Datenschutzerklärung über ihre Rechte informiert.</p><p>Als Verantwortliche hat Claudia Daneder zahlreiche technische und organisatorische Maßnahmen implementiert, um den umfassendsten Schutz personenbezogener Daten zu gewährleisten, die über diese Website verarbeitet werden. Internetbasierte Datenübertragungen können jedoch grundsätzlich Sicherheitslücken aufweisen, sodass ein absoluter Schutz nicht garantiert werden kann. Aus diesem Grund ist jede betroffene Person frei, personenbezogene Daten auf alternative Weise an uns zu übermitteln, z. B. telefonisch.</p>",
+        "button": "Schließen"
+    }
+}

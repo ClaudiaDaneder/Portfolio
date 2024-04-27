@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sent-message-dialog',
   standalone: true,
-  imports: [ MatDialogModule ],
+  imports: [ MatDialogModule, TranslateModule ],
   templateUrl: './sent-message-dialog.component.html',
   styleUrl: './sent-message-dialog.component.scss'
 })
