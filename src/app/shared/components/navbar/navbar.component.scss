@@ -38,6 +38,7 @@ $x-width: calc($hamburger-height * 1.41421356237);
 
 .nav-links {
     display: flex;
+    align-items: center;
     font-size: 23px;
     gap: 46px;
 

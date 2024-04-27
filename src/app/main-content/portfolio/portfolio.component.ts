@@ -15,7 +15,7 @@ export class PortfolioComponent {
   ngOnInit(): void {
     AOS.init({
       duration: 600,
-      delay: 500,
+      delay: 400,
       offset: 900,
       easing: 'ease-in',
       once: false
