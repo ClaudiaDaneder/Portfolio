@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { PrivacyDialogComponent } from './../dialogs/privacy-dialog/privacy-dialog.component';
 import { SentMessageDialogComponent } from '../dialogs/sent-message-dialog/sent-message-dialog.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Component({
   selector: 'app-contact',
@@ -21,7 +22,8 @@ export class ContactComponent {
   constructor(
     private formBuilder: FormBuilder,
     public privacyPolicyDialog: MatDialog,
-    public sentDialog: MatDialog
+    public sentDialog: MatDialog,
+    private httpClient: HttpClient
   ) {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -29,6 +31,33 @@ export class ContactComponent {
       message: ['', Validators.required],
       privacyPolicy: [false, Validators.requiredTrue]
     });
+  }
+
+  sendEmail(name: String, email: String, message: String) {
+
+    //Set the url with your secretKey from formspree.io
+    let url = "https://formspree.io/f/xgegrbjr";
+
+    //Set Headers
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Accept: "application/json",
+        "Content-Type": "application/x-www-form-urlencoded"
+      })
+    };
+
+    let data = `name=${name}&email=${email}&message=${message}`;
+    let errorMessage: string = "";
+
+    this.httpClient.post<any>(url, data, httpOptions).subscribe({
+      next: data => {
+        console.log("email sent" + JSON.stringify(data));
+      },
+      error: error => {
+        errorMessage = error.message;
+        console.log('error!', errorMessage);
+      }
+    })
   }
 
   onSubmit() {
@@ -60,5 +89,7 @@ export class ContactComponent {
   openSentDialog(): void {
     this.sentDialog.open(SentMessageDialogComponent);
   }
+
+
 
 }

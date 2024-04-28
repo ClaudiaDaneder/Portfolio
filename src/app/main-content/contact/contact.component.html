@@ -10,8 +10,7 @@
             </div>
 
 
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form"
-                action="https://formspree.io/f/xgegrbjr" method="POST">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
                 <div class="input-fields">
                     <div class="input-wrapper">
                         <input formControlName="name" type="text" placeholder="{{'contact.your-name' | translate }}"
@@ -48,15 +47,17 @@
                 </div>
                 <div class="checkbox-wrapper">
                     <input type="checkbox" formControlName="privacyPolicy">
-                        <p>{{ 'contact.i-have-read' | translate }}
-                            <a (click)="openPrivacyPolicy()">{{ 'contact.link' | translate }}</a>
-                            {{ 'contact.agree' | translate }}</p>
+                    <p>{{ 'contact.i-have-read' | translate }}
+                        <a (click)="openPrivacyPolicy()">{{ 'contact.link' | translate }}</a>
+                        {{ 'contact.agree' | translate }}
+                    </p>
                 </div>
                 <div
                     [ngClass]="{'privacy-alert-transparent': contactForm.controls['privacyPolicy'].valid || contactForm.controls['privacyPolicy'].pristine, 'privacy-alert-visible': !contactForm.controls['privacyPolicy'].valid && !contactForm.controls['privacyPolicy'].pristine && contactForm.controls['privacyPolicy'].errors?.['required']}">
                     {{ 'form.privacy' | translate }}
                 </div>
-                <button type="submit" class="contact-btn" [disabled]="contactForm.invalid">{{ 'contact.button' | translate }}</button>
+                <button type="submit" class="contact-btn"
+                    [disabled]="contactForm.invalid" (click)="sendEmail(contactForm.controls['name'].value, contactForm.controls['email'].value, contactForm.controls['message'].value)">{{ 'contact.button' | translate }}</button>
             </form>
 
         </div>

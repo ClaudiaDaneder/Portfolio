@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import AOS from "aos";
-import 'aos/dist/aos.css';
 
 
 @Component({
@@ -19,7 +18,8 @@ export class PortfolioComponent {
       delay: 400,
       offset: 1000,
       easing: 'ease-in',
-      once: false
+      once: false,
+      disable: 'mobile'
     });
     AOS.refresh();
   }
