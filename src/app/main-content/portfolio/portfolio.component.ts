@@ -18,7 +18,7 @@ export class PortfolioComponent {
       delay: 400,
       offset: 1000,
       easing: 'ease-in',
-      once: false,
+      once: true,
       disable: 'mobile'
     });
     AOS.refresh();

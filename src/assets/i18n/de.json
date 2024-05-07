@@ -7,6 +7,7 @@
     },
     "landing-page": {
         "i-am": "Ich bin",
+        "frontend": "Frontend-Entwicklerin",
         "contact-me": "Kontakt aufnehmen"
     },
     "socials": {
@@ -14,8 +15,8 @@
     },
     "about-me": {
         "about-me": "Über mich",
-        "intro": "In meiner beruflichen Laufbahn habe ich einen Einblick in HTML und CSS erhalten und schnell festgestellt, dass mich die Gestaltung und Umsetzung fasziniert.",
-        "puzzle": "Das Coden ist für mich wie das Knacken eines Rätsels oder das Lösen eines komplexen Puzzles – ich liebe es, kreative Ideen umzusetzen und an herausfordernden Projekten zu tüfteln. Mein oberstes Ziel ist es, das bestmögliche Ergebnis zu erzielen, das nicht nur ansprechend, sondern auch benutzerfreundlich ist.",
+        "intro": "In meiner beruflichen Laufbahn habe ich einen ersten Einblick in HTML und CSS erhalten und schnell festgestellt, dass ich großen Spaß am Coden habe. Ergänzt durch JavaScript und Angular habe ich nun eine solide Basis, um starke Projekte umsetzen zu können.",
+        "puzzle": "Für mich ist das Coden wie das Knacken eines Rätsels oder das Lösen eines komplexen Puzzles – ich liebe es, kreative Ideen umzusetzen und an herausfordernden Projekten zu tüfteln. Mein oberstes Ziel ist es, das bestmögliche Ergebnis zu erzielen, das nicht nur ansprechend, sondern auch benutzerfreundlich ist.",
         "bulb": "Mit einem ausgeprägten Auge für Details und einer präzisen Arbeitsweise sorge ich dafür, dass jedes Projekt bis ins kleinste Detail perfektioniert wird."
     },
     "skills": {

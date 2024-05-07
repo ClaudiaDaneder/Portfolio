@@ -7,6 +7,7 @@
     },
     "landing-page": {
         "i-am": "I am",
+        "frontend": "Frontend Developer",
         "contact-me": "Contact me"
     },
     "socials": {
@@ -14,7 +15,7 @@
     },
     "about-me": {
         "about-me": "About me",
-        "intro": "In my professional journey, I gained insight into HTML and CSS and quickly discovered my fascination with design and implementation.",
+        "intro": "In my professional journey, I gained a first insight into HTML and CSS, and quickly discovered my fascination with coding. With the addition of JavaScript and Angular, I now have powerful tools on my hands to design and implement great projects.",
         "puzzle": "Coding, to me, is like cracking a puzzle - I love turning creative ideas into reality and tackling challenging projects. My ultimate goal is to achieve the best possible outcome that is not only visually appealing but also user-friendly.",
         "bulb": "With a keen eye for detail and a precise approach, I ensure that every project is perfected down to the smallest detail."
     },
@@ -28,7 +29,7 @@
         "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
         "pollo-loco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
         "crm": "A very Simple Customer Relationship Management system working with CRUD functionality.",
-        "pokedex": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+        "pokedex": "Based on the PokéAPI, a simple library that provides and catalogues pokemon information."
     },
     "contact": {
         "contact": "Contact",
